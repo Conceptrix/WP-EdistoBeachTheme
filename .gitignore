@@ -1,0 +1,28 @@
+# EdistoBeach.com WordPress repository
+# Ignore everything in wp-content by default
+/*
+
+# Repository files
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+
+# GitHub configuration/workflows
+!/.github/
+!/.github/**
+
+# Themes
+!/themes/
+/themes/*
+
+# Our active child theme
+!/themes/verta-child/
+!/themes/verta-child/**
+
+# Plugins
+!/plugins/
+/plugins/*
+
+# Reserved for future EdistoBeach custom plugin
+!/plugins/edistobeach-site/
+!/plugins/edistobeach-site/**

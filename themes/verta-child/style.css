@@ -1,0 +1,205 @@
+/*
+ * Theme Name:  Verta Child
+ * Theme URI:   https://codesupply.co/themes/verta/
+ * Description: Verta Child Theme
+ * Author:      Code Supply Co.
+ * Author URI:  https://codesupply.co/
+ * Template:    verta
+ * Version:     1.0.0
+ */
+
+/* Copy any classes from parent theme here. They will override the parent's version. */
+
+.cnvs-block-alert.is-style-default {
+	background-color: transparent;
+}
+
+.fpur_bx_st img {
+	height: 180px;
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.sm_st_cst article {
+	margin-bottom: 40px;
+}
+
+
+.cs-header__col .cs-header__button {
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+form.cs-search__nav-form {
+	width: 202px !important;
+	max-width: 100% !important;
+}
+
+form.cs-search__nav-form,
+.cs-search__group {
+	border-radius: 8px;
+}
+
+form.cs-search__nav-form i {
+	color: #0ac2dc !important;
+}
+
+form.cs-search__nav-form input.cs-search__input {
+	font-size: 12px;
+}
+
+form.cs-search__nav-form input.cs-search__input::placeholder {
+	color: #CACACA !IMPORTANT;
+}
+
+.home_section_1 .cs-entry__outer .cs-entry__thumbnail {
+	height: 144px;
+}
+@media (max-width: 1024px) and (min-width: 768px){
+	.home_section_1 .cs-entry__outer .cs-entry__thumbnail{
+		height: 300px;
+	}
+}
+.home_section_1 .cs-entry__outer .cs-entry__thumbnail img,
+.featured_recipes_left .cs-entry__thumbnail img {
+	border-radius: 10px;
+}
+
+.featured_recipes_left .cs-entry__thumbnail {
+	height: 432px;
+}
+
+.featured_recipes_right article h3 {
+	margin-top: 5px !IMPORTANT;
+	margin-bottom: 5px !IMPORTANT;
+}
+
+.featured_recipes_right article .cs-entry__post-meta {
+	margin-top: 0 !important;
+}
+
+.featured_recipes_right article img {
+	border-radius: 10px !important;
+}
+
+.home_section_edisto_hist .cs-entry__read-more a {
+	padding: 0;
+	background-color: transparent;
+	color: #0ac2dc;
+	text-decoration: underline;
+}
+
+.home_section_blvd a.wp-block-button__link,
+.featured_box .cs-entry__read-more a {
+	padding: 8px 27px;
+}
+
+.featured_box .cs-entry__read-more a {
+	margin-top: 20px;
+	border-radius: 8px;
+}
+
+.featured_box h3,
+.featured_box .cs-entry__excerpt {
+	margin-bottom: 20px;
+}
+
+.home_section_blvd p {
+	margin: 20px 0 !important;
+	width: 650px;
+	max-width: 100%;
+}
+
+.home_section_blvd h3 {
+	margin-bottom: 20px !important;
+	width: 600px;
+	max-width: 100%;
+}
+
+.featured_3box .cs-entry__read-more a {
+	color: #0ac2dc;
+	background-color: transparent;
+	padding: 0;
+	text-decoration: underline;
+}
+.latest_updates_section .cs-entry__read-more a {
+    padding: 0;
+    background-color: transparent;
+    color: #0ac2dc;
+    font-size: 14px;
+    text-decoration: underline;
+}
+[data-scheme="dark"] .latest_updates_section .cs-entry__read-more a,
+[data-scheme="dark"]  .cnvs-block-posts-1597069584310 .cs-entry__content-inner:before {
+	color: #0ac2dc !important;
+}
+[data-scheme="dark"] .cs-entry__inner.cs-entry__content:before,
+[data-scheme="dark"] .sm_st_cst .cs-entry__content-inner:before{
+	background-color: #0ac2dc !important;
+}
+
+.cs-footer__item.cs-footer__item-top {
+    display: block;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-left {
+    width: 800px;
+    margin: 0 auto;
+	max-width: 100%;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-left ul#menu-footer-menu {
+    display: flex;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-left ul#menu-footer-menu a:hover {
+    color: #0ac2dc;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-right {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-right .cs-footer__inner {
+    display: block;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-right .cs-footer__inner .pk-social-links-items {
+    display: flex;
+    justify-content: center;
+}
+.cs-footer__item.cs-footer__item-top .cs-footer__col.cs-col-right .cs-footer__inner .pk-social-links-items .pk-social-links-item {
+    margin: 0 5px;
+}
+.psn_link a {
+    position: absolute;
+    top: -62px;
+    width: 90px;
+    right: 0;
+    max-width: 100%;
+}
+.psn_link {
+    position: relative;
+}
+.blvd_bx h3 {
+    width: 690px;
+    max-width: 100%;
+}
+.blvd_bx p {
+    width: 666px;
+    max-width: 100%;
+}
+.blvd_bx a {
+    padding: 9px 31px !important;
+}
+.cs-header__scheme-toggle .cs-header__scheme-toggle-element {
+    background: #6c757d;
+}
+
+@media (min-width: 991px) {
+	.sm_st_cst article:nth-child(even) {
+		margin-left: 20px;
+	}
+
+	.sm_st_cst article:nth-child(odd) {
+		margin-right: 20px;
+	}
+}
