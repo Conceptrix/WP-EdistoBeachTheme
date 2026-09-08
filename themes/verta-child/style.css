@@ -203,3 +203,61 @@ form.cs-search__nav-form input.cs-search__input::placeholder {
 		margin-right: 20px;
 	}
 }
+
+/* -------------------------------------------------------------------------
+ * Layout hardening — resilience against oversized dynamic content
+ *
+ * Verta's grid and flex containers rely on the default min-width:auto of
+ * grid/flex items, so an unshrinkable child (an AdSense unit, a fixed-width
+ * ad or map <iframe>, a long unbroken URL) can force a track or item wider
+ * than its container and break the layout. These rules add the standard
+ * minmax(0, ...) / min-width:0 / overflow-wrap safeguards and cap embedded
+ * media at 100% width. Column counts, thumbnail sizes, flex-basis values,
+ * display modes and spacing are intentionally left unchanged.
+ * ---------------------------------------------------------------------- */
+
+/* 1. Post grids and the tile-category grid: shrinkable tracks and items. */
+.cs-posts-area__main {
+	grid-template-columns: repeat(var(--cs-posts-area-grid-columns, 1), minmax(0, 1fr));
+}
+
+.cs-tiles-categories__wrap {
+	grid-template-columns: repeat(var(--cs-categories-grid-columns, 1), minmax(0, 1fr));
+}
+
+.cs-posts-area__main > *,
+.cs-tiles-categories__wrap > * {
+	min-width: 0;
+}
+
+/* 2. Post-card flex/grid children can shrink below their content size. */
+.cs-entry__outer,
+.cs-entry__outer > *,
+.cs-entry__inner,
+.cs-entry__content {
+	min-width: 0;
+}
+
+/* 3. Long unbroken strings (URLs, injected text) wrap instead of forcing width. */
+.entry-content,
+.cs-entry__excerpt,
+.cs-entry__content {
+	overflow-wrap: anywhere;
+}
+
+/* 4. Embedded content in the article body, widgets and sidebar stays in its box. */
+.entry-content :is(iframe, embed, object),
+.widget :is(iframe, embed, object),
+.cs-sidebar__area :is(iframe, embed, object) {
+	max-width: 100%;
+}
+
+/* 5. Sidebar column and its widgets stay within their track. */
+.cs-sidebar__inner {
+	min-width: 0;
+}
+
+.cs-sidebar__inner .widget,
+.cs-sidebar__inner .widget > * {
+	max-width: 100%;
+}
